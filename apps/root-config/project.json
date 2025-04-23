@@ -1,0 +1,76 @@
+{
+  "name": "root-config",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/root-config/src",
+  "projectType": "application",
+  "tags": [
+    "core-app",
+    "type:application"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/root-config",
+        "index": "apps/root-config/src/index.ejs",
+        "main": "apps/root-config/src/root-config.ts",
+        "tsConfig": "apps/root-config/tsconfig.app.json",
+        "assets": [
+          "apps/root-config/src/assets"
+        ],
+        "webpackConfig": "apps/root-config/webpack.config.js"
+      },
+      "configurations": {
+        "local": {
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        },
+        "dev": {
+          "outputHashing": "all"
+        },
+        "pre-prod": {
+          "outputHashing": "all"
+        },
+        "prod": {
+          "outputHashing": "all"
+        }
+      },
+      "defaultConfiguration": "local"
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "options": {
+        "port": 8000,
+        "watch": true,
+        "liveReload": true,
+        "buildTarget": "root-config:build"
+      },
+      "configurations": {
+        "local": {
+          "buildTarget": "root-config:build:local"
+        },
+        "dev": {
+          "buildTarget": "root-config:build:dev"
+        },
+        "pre-prod": {
+          "buildTarget": "root-config:build:pre-prod"
+        },
+        "prod": {
+          "buildTarget": "root-config:build:prod"
+        }
+      },
+      "defaultConfiguration": "local"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

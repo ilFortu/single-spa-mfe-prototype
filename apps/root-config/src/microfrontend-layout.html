@@ -1,0 +1,27 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <main>
+    <application class="angular-app tw" name="@antonio/angular-app"></application>
+
+    <div class="main-container">
+      <div id="view-container">
+        <route path="/error">
+          <div class="tw">
+            <h1 class="text-3xl font-semibold mb-8">Error</h1>
+            <p>We are unable to handle your request currently, please try again later.</p>
+          </div>
+        </route>
+
+        <!--<route default>
+          <application class="use-tw" name="@antonio/common"></application>
+        </route>-->
+      </div>
+    </div>
+  </main>
+</single-spa-router>
