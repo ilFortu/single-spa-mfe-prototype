@@ -14,7 +14,7 @@
       "options": {
         "outputPath": "dist/apps/angular-app",
         "index": "apps/angular-app/src/index.html",
-        "main": "apps/app-bar/src/main.single-spa.ts",
+        "main": "apps/angular-app/src/main.ts",
         "tsConfig": "apps/angular-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -23,10 +23,6 @@
             "input": "apps/angular-app/public"
           }
         ],
-        "styles": [
-          "apps/angular-app/src/styles.scss"
-        ],
-        "scripts": [],
         "customWebpackConfig": {
           "libraryName": "angular-app",
           "libraryTarget": "system",
@@ -58,10 +54,13 @@
           "namedChunks": true
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "development"
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 4200
+      },
       "configurations": {
         "production": {
           "buildTarget": "angular-app:build:production"

@@ -5,23 +5,24 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "@angular/common": "~19.2.6",
-    "@angular/compiler": "~19.2.6",
-    "@angular/core": "~19.2.6",
-    "@angular/forms": "~19.2.6",
-    "@angular/platform-browser": "~19.2.6",
-    "@angular/platform-browser-dynamic": "~19.2.6",
-    "@angular/router": "~19.2.6",
-    "rxjs": "~7.8.2"
+    "@angular/common": "~19.2.8",
+    "@angular/compiler": "~19.2.8",
+    "@angular/core": "~19.2.8",
+    "@angular/forms": "~19.2.8",
+    "@angular/platform-browser": "~19.2.8",
+    "@angular/platform-browser-dynamic": "~19.2.8",
+    "@angular/router": "~19.2.8",
+    "rxjs": "~7.8.2",
+    "single-spa-angular": "9.2.0"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "19.0.1",
-    "@angular-devkit/build-angular": "~19.2.7",
-    "@angular-devkit/core": "~19.2.7",
-    "@angular-devkit/schematics": "~19.2.7",
-    "@angular/cli": "~19.2.7",
-    "@angular/compiler-cli": "~19.2.6",
-    "@angular/language-service": "~19.2.6",
+    "@angular-devkit/build-angular": "~19.2.9",
+    "@angular-devkit/core": "~19.2.9",
+    "@angular-devkit/schematics": "~19.2.9",
+    "@angular/cli": "~19.2.9",
+    "@angular/compiler-cli": "~19.2.8",
+    "@angular/language-service": "~19.2.8",
     "angular-eslint": "^19.3.0"
   },
   "peerDependencies": {
